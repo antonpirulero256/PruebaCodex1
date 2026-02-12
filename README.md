@@ -4,11 +4,13 @@ MVP para transcripción de audio multilingüe con **IA open source** usando `fas
 
 ## Qué incluye
 
-- API REST para transcribir audio (`/transcribe`).
+- Endpoint raíz `GET /` para descubrir rutas principales.
+- API REST para transcribir audio (`POST /transcribe`).
 - Detección automática de idioma (o idioma manual).
-- Exportación de resultados en `txt`, `srt`, `vtt` o `json` (`/transcribe/export`).
+- Exportación de resultados en `txt`, `srt`, `vtt` o `json` (`POST /transcribe/export`).
+- Endpoint de salud (`GET /health`).
 - Preprocesado opcional con `ffmpeg` (mono, 16kHz) para mejorar robustez.
-- Contenedor Docker listo para ejecutar.
+- Contenedor Docker y configuración de Codespaces.
 
 ## Requisitos
 
@@ -21,12 +23,26 @@ MVP para transcripción de audio multilingüe con **IA open source** usando `fas
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-uvicorn app.main:app --reload
+python -m uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 ```
 
 API en: `http://localhost:8000`
 
 Swagger en: `http://localhost:8000/docs`
+
+## Probar en Codespaces
+
+1. Crea un Codespace desde el repositorio.
+2. Espera a que termine `postCreateCommand` (crea `.venv` e instala dependencias).
+3. Arranca la API:
+
+```bash
+source .venv/bin/activate
+python -m uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+```
+
+4. Abre el puerto reenviado `8000` en la pestaña **Ports** de Codespaces.
+5. Navega a `https://<tu-url-codespaces>/docs` para abrir Swagger.
 
 ## Configuración del modelo
 
@@ -42,7 +58,14 @@ Variables de entorno:
 docker compose up --build
 ```
 
-## Ejemplos de uso
+## Endpoints principales
+
+- `GET /`
+- `GET /health`
+- `POST /transcribe`
+- `POST /transcribe/export`
+
+## Ejemplos curl
 
 ### 1) Transcribir (JSON)
 
@@ -51,24 +74,17 @@ curl -X POST "http://localhost:8000/transcribe?beam_size=5&vad_filter=true" \
   -F "file=@mi_audio.mp3"
 ```
 
-### 2) Exportar como texto plano
-
-```bash
-curl -X POST "http://localhost:8000/transcribe/export?format=txt" \
-  -F "file=@mi_audio.mp3"
-```
-
-### 3) Exportar subtítulos SRT
+### 2) Exportar subtítulos SRT
 
 ```bash
 curl -X POST "http://localhost:8000/transcribe/export?format=srt" \
   -F "file=@mi_audio.mp3"
 ```
 
-### 4) Forzar idioma (ej. español)
+### 3) Exportar subtítulos VTT
 
 ```bash
-curl -X POST "http://localhost:8000/transcribe?language=es" \
+curl -X POST "http://localhost:8000/transcribe/export?format=vtt" \
   -F "file=@mi_audio.mp3"
 ```
 

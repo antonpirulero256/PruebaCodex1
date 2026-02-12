@@ -25,6 +25,16 @@ app = FastAPI(
 )
 
 
+@app.get("/")
+def root() -> dict[str, object]:
+    return {
+        "ok": True,
+        "docs": "/docs",
+        "health": "/health",
+        "endpoints": ["/transcribe", "/transcribe/export"],
+    }
+
+
 @app.get("/health")
 def health() -> dict[str, str]:
     return {"status": "ok", "model": MODEL_SIZE, "device": DEVICE}

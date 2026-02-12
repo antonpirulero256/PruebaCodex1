@@ -1,0 +1,34 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - WHISPER_MODEL=small
+      - WHISPER_DEVICE=cpu
+      - WHISPER_COMPUTE_TYPE=int8
+      - REDIS_URL=redis://redis:6379/0
+      - RQ_QUEUE=transcriptions
+    volumes:
+      - ./data:/app/data
+    depends_on:
+      - redis
+
+  worker:
+    build: .
+    command: rq worker ${RQ_QUEUE:-transcriptions} --url ${REDIS_URL:-redis://redis:6379/0}
+    environment:
+      - WHISPER_MODEL=small
+      - WHISPER_DEVICE=cpu
+      - WHISPER_COMPUTE_TYPE=int8
+      - REDIS_URL=redis://redis:6379/0
+      - RQ_QUEUE=transcriptions
+    volumes:
+      - ./data:/app/data
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"

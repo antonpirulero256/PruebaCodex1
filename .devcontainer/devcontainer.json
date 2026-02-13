@@ -1,12 +1,17 @@
 {
   "name": "PruebaCodex1",
-  "image": "mcr.microsoft.com/devcontainers/python:1-3.11-bullseye",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
   "remoteUser": "vscode",
   "features": {
-    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {
+      "moby": false
+    }
   },
   "postCreateCommand": "bash .devcontainer/setup.sh",
   "postStartCommand": "bash .devcontainer/setup.sh",
+  "remoteEnv": {
+    "DOCKER_API_VERSION": "1.43"
+  },
   "forwardPorts": [8000],
   "portsAttributes": {
     "8000": {

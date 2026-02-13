@@ -136,3 +136,7 @@ python -m uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 ```
 
 Nota: es normal que Codespaces muestre imágenes base en logs internos (por ejemplo `devcontainers/base:alpine`) por su proceso de orquestación; el proyecto sigue usando la imagen Python 3.11 definida en `.devcontainer/devcontainer.json`.
+
+Si en VS Code (panel Containers/Images) ves **"Failed to connect. Is Docker installed?"**, suele ser porque el devcontainer aún no tiene habilitado acceso a Docker para esa extensión.
+En este repo se habilita con la feature `docker-outside-of-docker`; tras actualizar, ejecuta **Rebuild Container** para que desaparezca ese aviso.
+

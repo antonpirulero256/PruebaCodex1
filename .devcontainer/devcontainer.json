@@ -2,6 +2,9 @@
   "name": "PruebaCodex1",
   "image": "mcr.microsoft.com/devcontainers/python:1-3.11-bullseye",
   "remoteUser": "vscode",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
+  },
   "postCreateCommand": "bash .devcontainer/setup.sh",
   "postStartCommand": "bash .devcontainer/setup.sh",
   "forwardPorts": [8000],

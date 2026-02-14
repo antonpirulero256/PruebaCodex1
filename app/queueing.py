@@ -25,7 +25,7 @@ def enqueue_transcription_job(
     export_formats: list[str],
 ):
     queue = get_queue()
-    return queue.enqueue(
+    return queue.enqueue_call(
         "app.worker.process_transcription_job",
         kwargs={
             "batch_id": batch_id,

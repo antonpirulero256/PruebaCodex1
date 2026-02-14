@@ -1,0 +1,17 @@
+{
+  "language": "es",
+  "duration": 7.858,
+  "text": "Yo pensaba que lo que pone hoy es el momento que tú has comprado, entonces te pone ahí que has comprado.",
+  "segments": [
+    {
+      "start": 0.05,
+      "end": 5.05,
+      "text": "Yo pensaba que lo que pone hoy es el momento que tú has comprado,"
+    },
+    {
+      "start": 5.05,
+      "end": 8.05,
+      "text": "entonces te pone ahí que has comprado."
+    }
+  ]
+}

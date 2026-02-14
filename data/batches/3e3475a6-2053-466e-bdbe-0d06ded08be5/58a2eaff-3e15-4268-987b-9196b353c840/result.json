@@ -1,0 +1,42 @@
+{
+  "language": "gl",
+  "duration": 18.154,
+  "text": "hola Nando, bonas minhas os beneficios que se ganen a xiga a corto plazo como os de outro dia, os corteciendos e xe que te pases non xea de 50% a un bonedero ou que se reenbiartan directamente bueno, xume algo",
+  "segments": [
+    {
+      "start": 0.53,
+      "end": 2.53,
+      "text": "hola Nando, bonas minhas"
+    },
+    {
+      "start": 3.53,
+      "end": 6.53,
+      "text": "os beneficios que se ganen a xiga a corto plazo"
+    },
+    {
+      "start": 6.53,
+      "end": 8.53,
+      "text": "como os de outro dia, os corteciendos"
+    },
+    {
+      "start": 8.53,
+      "end": 10.53,
+      "text": "e xe que te"
+    },
+    {
+      "start": 10.53,
+      "end": 13.53,
+      "text": "pases non xea de 50% a un bonedero"
+    },
+    {
+      "start": 13.53,
+      "end": 16.53,
+      "text": "ou que se reenbiartan directamente"
+    },
+    {
+      "start": 16.53,
+      "end": 18.53,
+      "text": "bueno, xume algo"
+    }
+  ]
+}

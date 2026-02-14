@@ -1,0 +1,7 @@
+1
+00:00:01,330 --> 00:00:07,450
+La conversión de Euradoles sería si tú metes 30.000, pues sería tener sobre 31.500 dólares
+
+2
+00:00:07,450 --> 00:00:10,090
+y de ahí te quitarán el porcentaje de comisión.

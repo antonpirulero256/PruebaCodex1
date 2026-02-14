@@ -1,0 +1,22 @@
+{
+  "language": "es",
+  "duration": 13.498,
+  "text": "Madre mía, tío, qué barbaridad. ¿Qué web es la que utilizas para hacer estas cosas, la que me dijiste que me descargara? Coin Market, no sé qué.",
+  "segments": [
+    {
+      "start": 0.18,
+      "end": 4.18,
+      "text": "Madre mía, tío, qué barbaridad."
+    },
+    {
+      "start": 4.18,
+      "end": 11.18,
+      "text": "¿Qué web es la que utilizas para hacer estas cosas, la que me dijiste que me descargara?"
+    },
+    {
+      "start": 11.18,
+      "end": 13.18,
+      "text": "Coin Market, no sé qué."
+    }
+  ]
+}

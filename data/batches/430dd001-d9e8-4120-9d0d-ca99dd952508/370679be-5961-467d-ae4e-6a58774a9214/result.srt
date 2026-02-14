@@ -1,0 +1,23 @@
+1
+00:00:00,500 --> 00:00:10,500
+O plan que usamos, principalmente, é selecionamos, por exemplo, unha serie de 10, 15 monedas, nos vamos a hacer máis.
+
+2
+00:00:10,500 --> 00:00:21,500
+E compraramos unha parte en spot, es decir, que no lleva palancamiento. Imagínate, pues se un trón des 40K, pues a mojora destinamos 20 y 20.
+
+3
+00:00:21,500 --> 00:00:28,500
+En spot, que é todo mocho má seguro. Las bajadas no son tan grandes.
+
+4
+00:00:28,500 --> 00:00:34,500
+E despues do trón 20, que sí que ya tiene má riso, que é apalancados en futuros.
+
+5
+00:00:34,500 --> 00:00:48,500
+E eso lo que haces, claro, imagínate, se Wid suba de 3 dólares a 4, en spot ganarías un 33%.
+
+6
+00:00:48,500 --> 00:00:56,500
+Pero en futuros ganarías un 330, es decir, multiplicar o que inviertes por 3,33.

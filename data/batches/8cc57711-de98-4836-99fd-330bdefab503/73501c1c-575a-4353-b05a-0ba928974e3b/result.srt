@@ -1,0 +1,19 @@
+1
+00:00:00,340 --> 00:00:04,340
+¡Ostia, perdona que no me había enterado el mensaje que estaba hablando con el chico!
+
+2
+00:00:04,340 --> 00:00:06,340
+¿Ya se ha ido?
+
+3
+00:00:06,340 --> 00:00:08,340
+¿Ya se ha ido?
+
+4
+00:00:08,340 --> 00:00:10,340
+¿El qué?
+
+5
+00:00:10,340 --> 00:00:12,340
+¿Qué es lo que falta?

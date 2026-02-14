@@ -1,0 +1,32 @@
+{
+  "language": "es",
+  "duration": 11.755,
+  "text": "El arma de un toro, claro. No te digas que no es. Sabía de eso. Tiene un toro que hay. No te digas que no es.",
+  "segments": [
+    {
+      "start": 0.02,
+      "end": 2.02,
+      "text": "El arma de un toro, claro."
+    },
+    {
+      "start": 2.02,
+      "end": 4.02,
+      "text": "No te digas que no es."
+    },
+    {
+      "start": 6.02,
+      "end": 7.02,
+      "text": "Sabía de eso."
+    },
+    {
+      "start": 7.02,
+      "end": 9.02,
+      "text": "Tiene un toro que hay."
+    },
+    {
+      "start": 9.02,
+      "end": 11.02,
+      "text": "No te digas que no es."
+    }
+  ]
+}

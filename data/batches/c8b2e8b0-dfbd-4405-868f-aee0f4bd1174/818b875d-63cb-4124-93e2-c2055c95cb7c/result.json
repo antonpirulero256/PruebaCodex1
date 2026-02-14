@@ -1,0 +1,17 @@
+{
+  "language": "es",
+  "duration": 12.098,
+  "text": "Bueno, bueno, bueno, la cosa va cogiendo color. De aluminio va bien saberlo, de momento me estoy servido. O sea, bajas con tecnal.",
+  "segments": [
+    {
+      "start": 0.21,
+      "end": 9.21,
+      "text": "Bueno, bueno, bueno, la cosa va cogiendo color. De aluminio va bien saberlo, de momento me estoy servido."
+    },
+    {
+      "start": 10.21,
+      "end": 12.21,
+      "text": "O sea, bajas con tecnal."
+    }
+  ]
+}

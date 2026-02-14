@@ -1,0 +1,27 @@
+{
+  "language": "es",
+  "duration": 23.118,
+  "text": "Pedro, disculpa que no te contestaba ninguna de las cosas que me has puesto. Ya he conseguido hablar con Bruno, bueno, muy poquito porque llevo dos días que voy de puto culo. Ahora estoy aquí en un bar que estoy esperando para hablar con el abogado por el tema de Bruno y como está reunido me estoy esperando a ver si acaba, pero es que voy de puto culo, tío.",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 4.0,
+      "text": "Pedro, disculpa que no te contestaba ninguna de las cosas que me has puesto."
+    },
+    {
+      "start": 4.0,
+      "end": 11.0,
+      "text": "Ya he conseguido hablar con Bruno, bueno, muy poquito porque llevo dos días que voy de puto culo."
+    },
+    {
+      "start": 11.0,
+      "end": 17.0,
+      "text": "Ahora estoy aquí en un bar que estoy esperando para hablar con el abogado por el tema de Bruno"
+    },
+    {
+      "start": 17.0,
+      "end": 23.0,
+      "text": "y como está reunido me estoy esperando a ver si acaba, pero es que voy de puto culo, tío."
+    }
+  ]
+}

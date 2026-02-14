@@ -1,0 +1,22 @@
+{
+  "language": "es",
+  "duration": 13.178,
+  "text": "No, este se gana la vida de otra forma, pero si puede rascar, pues rascá. Este ya no le hace falta dinero. Hasta bien, cabrón.",
+  "segments": [
+    {
+      "start": 0.72,
+      "end": 5.72,
+      "text": "No, este se gana la vida de otra forma, pero si puede rascar, pues rascá."
+    },
+    {
+      "start": 7.72,
+      "end": 10.72,
+      "text": "Este ya no le hace falta dinero."
+    },
+    {
+      "start": 10.72,
+      "end": 12.72,
+      "text": "Hasta bien, cabrón."
+    }
+  ]
+}

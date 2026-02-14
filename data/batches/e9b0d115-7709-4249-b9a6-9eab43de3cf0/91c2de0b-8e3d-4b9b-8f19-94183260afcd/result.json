@@ -1,0 +1,17 @@
+{
+  "language": "es",
+  "duration": 8.498,
+  "text": "Hostia, tío, pues si en el accidente ha venido la policía te van a joder bien. Ahora, si no te han cogido no pasa nada.",
+  "segments": [
+    {
+      "start": 0.46,
+      "end": 5.46,
+      "text": "Hostia, tío, pues si en el accidente ha venido la policía te van a joder bien."
+    },
+    {
+      "start": 5.46,
+      "end": 8.46,
+      "text": "Ahora, si no te han cogido no pasa nada."
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "batch_id": "c8b2e8b0-dfbd-4405-868f-aee0f4bd1174",
+  "job_id": "c3cddaf9-5524-49db-823d-a5105e043afc",
+  "filename": "attachments/2d52759ff23b4f219f87ff6095a3d8c0.opus",
+  "status": "done",
+  "created_at": "2026-02-14T16:03:17.763357+00:00",
+  "updated_at": "2026-02-14T16:06:43.381964+00:00",
+  "language": null,
+  "beam_size": 5,
+  "vad_filter": true,
+  "export_formats": [
+    "txt",
+    "srt",
+    "json"
+  ],
+  "input_path": "data/batches/c8b2e8b0-dfbd-4405-868f-aee0f4bd1174/c3cddaf9-5524-49db-823d-a5105e043afc/input.opus",
+  "result_files": {
+    "json": "data/batches/c8b2e8b0-dfbd-4405-868f-aee0f4bd1174/c3cddaf9-5524-49db-823d-a5105e043afc/result.json",
+    "txt": "data/batches/c8b2e8b0-dfbd-4405-868f-aee0f4bd1174/c3cddaf9-5524-49db-823d-a5105e043afc/result.txt",
+    "srt": "data/batches/c8b2e8b0-dfbd-4405-868f-aee0f4bd1174/c3cddaf9-5524-49db-823d-a5105e043afc/result.srt"
+  },
+  "started_at": "2026-02-14T16:06:29.531043+00:00",
+  "finished_at": "2026-02-14T16:06:43.381841+00:00",
+  "process_time_seconds": 13.851,
+  "audio_duration_seconds": 24.858,
+  "model": "small",
+  "device": "cpu",
+  "compute_type": "int8",
+  "detected_language": "es"
+}

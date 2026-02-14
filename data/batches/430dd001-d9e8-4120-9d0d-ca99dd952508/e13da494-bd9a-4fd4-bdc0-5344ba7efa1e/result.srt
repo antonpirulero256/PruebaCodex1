@@ -1,0 +1,7 @@
+1
+00:00:00,050 --> 00:00:05,050
+Yo pensaba que lo que pone hoy es el momento que tú has comprado,
+
+2
+00:00:05,050 --> 00:00:08,050
+entonces te pone ahí que has comprado.

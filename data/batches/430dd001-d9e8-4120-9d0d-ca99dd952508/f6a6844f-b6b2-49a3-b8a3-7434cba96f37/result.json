@@ -1,0 +1,27 @@
+{
+  "language": "es",
+  "duration": 20.433,
+  "text": "Sí, sí, eso es lo que te comentaba ayer que es lo de la pariedad del dólar, ¿sabes? Por ejemplo, pues 30.000 euros, pues ahora mismo no sé muy bien cómo está, pero creo que habría que multiplicar por 1,05 más o menos para tener los dólares, eso hay que quitarle el porcentaje que te cobre, pero sí.",
+  "segments": [
+    {
+      "start": 0.56,
+      "end": 4.76,
+      "text": "Sí, sí, eso es lo que te comentaba ayer que es lo de la pariedad del dólar, ¿sabes?"
+    },
+    {
+      "start": 4.76,
+      "end": 11.08,
+      "text": "Por ejemplo, pues 30.000 euros, pues ahora mismo no sé muy bien cómo está, pero creo"
+    },
+    {
+      "start": 11.08,
+      "end": 17.64,
+      "text": "que habría que multiplicar por 1,05 más o menos para tener los dólares, eso hay que"
+    },
+    {
+      "start": 17.64,
+      "end": 19.96,
+      "text": "quitarle el porcentaje que te cobre, pero sí."
+    }
+  ]
+}

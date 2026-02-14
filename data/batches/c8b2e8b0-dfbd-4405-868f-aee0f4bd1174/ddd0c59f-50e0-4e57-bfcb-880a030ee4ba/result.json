@@ -1,0 +1,22 @@
+{
+  "language": "es",
+  "duration": 20.818,
+  "text": "Vale, acabo de quedar con el chico mañana. Mañana subo a Barcelona, le subo el efectivo y ya desde ahí dice que te hará a esto que me dijiste tú, a la cuenta de esa que me creaste, a la Wallet, te mandará 35 euros o 30 euros para confirmar que esté todo correcto y cuando ya tú me desloqueí, mandará el resto.",
+  "segments": [
+    {
+      "start": 0.4,
+      "end": 7.4,
+      "text": "Vale, acabo de quedar con el chico mañana. Mañana subo a Barcelona, le subo el efectivo y ya desde ahí dice que te hará"
+    },
+    {
+      "start": 7.4,
+      "end": 15.4,
+      "text": "a esto que me dijiste tú, a la cuenta de esa que me creaste, a la Wallet, te mandará 35 euros o 30 euros para"
+    },
+    {
+      "start": 15.4,
+      "end": 20.4,
+      "text": "confirmar que esté todo correcto y cuando ya tú me desloqueí, mandará el resto."
+    }
+  ]
+}

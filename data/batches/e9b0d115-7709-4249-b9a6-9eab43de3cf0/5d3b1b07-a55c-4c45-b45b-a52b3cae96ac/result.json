@@ -1,0 +1,27 @@
+{
+  "language": "es",
+  "duration": 23.838,
+  "text": "A ver, Bruno me debe a mí un dinero de hace tiempo. Vale, lo que ha pagado él son 80 pico. Yo teóricamente le tendría que dar ese dinero a él, pero le voy a dar algo menos, lo que tú has dicho aproximadamente, pero cómodamente, no sólo tengo que dar a Tuntun. ¿Sabes lo que te quiero decir?",
+  "segments": [
+    {
+      "start": 0.94,
+      "end": 6.34,
+      "text": "A ver, Bruno me debe a mí un dinero de hace tiempo. Vale, lo que ha pagado él son 80"
+    },
+    {
+      "start": 6.34,
+      "end": 14.06,
+      "text": "pico. Yo teóricamente le tendría que dar ese dinero a él, pero le voy a dar algo"
+    },
+    {
+      "start": 14.06,
+      "end": 21.02,
+      "text": "menos, lo que tú has dicho aproximadamente, pero cómodamente, no sólo tengo que dar"
+    },
+    {
+      "start": 21.02,
+      "end": 24.46,
+      "text": "a Tuntun. ¿Sabes lo que te quiero decir?"
+    }
+  ]
+}

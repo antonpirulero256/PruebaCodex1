@@ -1,0 +1,17 @@
+{
+  "language": "fi",
+  "duration": 3.578,
+  "text": "Ostiaputa! No vee!",
+  "segments": [
+    {
+      "start": 0.69,
+      "end": 2.69,
+      "text": "Ostiaputa!"
+    },
+    {
+      "start": 2.69,
+      "end": 3.69,
+      "text": "No vee!"
+    }
+  ]
+}

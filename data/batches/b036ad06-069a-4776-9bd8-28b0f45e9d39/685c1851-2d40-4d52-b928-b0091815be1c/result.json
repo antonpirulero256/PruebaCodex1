@@ -1,0 +1,27 @@
+{
+  "language": "es",
+  "duration": 29.218,
+  "text": "No, no me has entendido. Por ejemplo yo meto un dólar y al cabo de un tiempo sube un 100% y tengo dos dólares, ¿vale? Y al cabo de otro tiempo baja un 300%. Digamos que pierdo... estaría en menos un dólar. Ese dinero invertido, ese dólar ya lo he perdido o el día de mañana que vuelva a subir, vuelvo a recuperar el dinero.",
+  "segments": [
+    {
+      "start": 0.53,
+      "end": 8.53,
+      "text": "No, no me has entendido. Por ejemplo yo meto un dólar y al cabo de un tiempo sube un 100% y"
+    },
+    {
+      "start": 8.53,
+      "end": 18.53,
+      "text": "tengo dos dólares, ¿vale? Y al cabo de otro tiempo baja un 300%. Digamos que pierdo..."
+    },
+    {
+      "start": 19.53,
+      "end": 25.53,
+      "text": "estaría en menos un dólar. Ese dinero invertido, ese dólar ya lo he perdido o el día de mañana"
+    },
+    {
+      "start": 25.53,
+      "end": 28.53,
+      "text": "que vuelva a subir, vuelvo a recuperar el dinero."
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "language": "es",
+  "duration": 33.438,
+  "text": "Ya está Pedro, me ha contestado, me ha dicho que es sin problema, que tiene razón, que funciona así. Dices que llevo poco con esto de la wallet, digo, ya, ya digo, pero es que mi amigo lleva seis años y se dedica a esto. Digo, ahí no hay fallo. Y se ve que lo ha consultado y le han dicho que sí. Nada, me haces el cálculo de lo que sería, porque él me ha dicho un dos, él me ha dicho un dos. Entonces me haces el cálculo, se lo mando y le mandamos otra vez el QR. Pero dame media horita que llegue a casa, porfa.",
+  "segments": [
+    {
+      "start": 0.46,
+      "end": 4.94,
+      "text": "Ya está Pedro, me ha contestado, me ha dicho que es sin problema, que tiene razón, que funciona así."
+    },
+    {
+      "start": 4.94,
+      "end": 11.06,
+      "text": "Dices que llevo poco con esto de la wallet, digo, ya, ya digo, pero es que mi amigo lleva seis años y se dedica a esto."
+    },
+    {
+      "start": 11.06,
+      "end": 15.3,
+      "text": "Digo, ahí no hay fallo. Y se ve que lo ha consultado y le han dicho que sí."
+    },
+    {
+      "start": 15.3,
+      "end": 25.82,
+      "text": "Nada, me haces el cálculo de lo que sería, porque él me ha dicho un dos, él me ha dicho un dos."
+    },
+    {
+      "start": 26.62,
+      "end": 30.42,
+      "text": "Entonces me haces el cálculo, se lo mando y le mandamos otra vez el QR."
+    },
+    {
+      "start": 30.42,
+      "end": 33.42,
+      "text": "Pero dame media horita que llegue a casa, porfa."
+    }
+  ]
+}

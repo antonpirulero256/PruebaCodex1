@@ -1,0 +1,3 @@
+1
+00:00:00,430 --> 00:00:05,930
+Pedro, ¿qué tal? ¿cómo estás? ¿cómo lleva la recuperación? ¿y cómo va lo nuestro?

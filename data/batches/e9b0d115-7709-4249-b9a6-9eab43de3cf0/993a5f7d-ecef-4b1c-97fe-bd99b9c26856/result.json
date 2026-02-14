@@ -1,0 +1,17 @@
+{
+  "language": "es",
+  "duration": 14.258,
+  "text": "Hostia lo siento Pedro, lo siento tío, no te preocupes, si puedes contestas y si no pues cuando puedas o cuando te veas con ánimo, venga un abrazo.",
+  "segments": [
+    {
+      "start": 0.78,
+      "end": 9.42,
+      "text": "Hostia lo siento Pedro, lo siento tío, no te preocupes, si puedes contestas y si no pues"
+    },
+    {
+      "start": 9.42,
+      "end": 13.14,
+      "text": "cuando puedas o cuando te veas con ánimo, venga un abrazo."
+    }
+  ]
+}

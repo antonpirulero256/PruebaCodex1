@@ -1,0 +1,19 @@
+1
+00:00:01,070 --> 00:00:05,070
+¿Qué pasa con esto? Tienes que medir el riesgo porque, por ejemplo, si WIF
+
+2
+00:00:05,070 --> 00:00:08,070
+cae de 3 a 2,7...
+
+3
+00:00:08,070 --> 00:00:11,070
+claro, pierdes el 100% de lo que has metido
+
+4
+00:00:11,070 --> 00:00:13,070
+porque estás apalancándote por 10
+
+5
+00:00:13,070 --> 00:00:15,070
+así me explico

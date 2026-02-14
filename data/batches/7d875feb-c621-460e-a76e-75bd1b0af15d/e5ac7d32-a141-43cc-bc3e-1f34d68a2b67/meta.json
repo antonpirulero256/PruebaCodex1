@@ -1,0 +1,26 @@
+{
+  "batch_id": "7d875feb-c621-460e-a76e-75bd1b0af15d",
+  "job_id": "e5ac7d32-a141-43cc-bc3e-1f34d68a2b67",
+  "filename": "00a6354e0f5e45329ce42d513407775f.opus",
+  "status": "failed",
+  "created_at": "2026-02-14T15:01:12.020569+00:00",
+  "updated_at": "2026-02-14T15:01:13.734088+00:00",
+  "language": "string",
+  "beam_size": 5,
+  "vad_filter": true,
+  "export_formats": [
+    "json",
+    "txt",
+    "srt",
+    "vtt"
+  ],
+  "input_path": "data/batches/7d875feb-c621-460e-a76e-75bd1b0af15d/e5ac7d32-a141-43cc-bc3e-1f34d68a2b67/input.opus",
+  "result_files": {},
+  "started_at": "2026-02-14T15:01:12.299449+00:00",
+  "finished_at": "2026-02-14T15:01:13.733964+00:00",
+  "process_time_seconds": 1.435,
+  "error": "'string' is not a valid language code (accepted language codes: af, am, ar, as, az, ba, be, bg, bn, bo, br, bs, ca, cs, cy, da, de, el, en, es, et, eu, fa, fi, fo, fr, gl, gu, ha, haw, he, hi, hr, ht, hu, hy, id, is, it, ja, jw, ka, kk, km, kn, ko, la, lb, ln, lo, lt, lv, mg, mi, mk, ml, mn, mr, ms, mt, my, ne, nl, nn, no, oc, pa, pl, ps, pt, ro, ru, sa, sd, si, sk, sl, sn, so, sq, sr, su, sv, sw, ta, te, tg, th, tk, tl, tr, tt, uk, ur, uz, vi, yi, yo, zh, yue)",
+  "model": "small",
+  "device": "cpu",
+  "compute_type": "int8"
+}

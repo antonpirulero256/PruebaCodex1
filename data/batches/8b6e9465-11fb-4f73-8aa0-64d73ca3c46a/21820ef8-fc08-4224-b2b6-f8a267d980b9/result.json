@@ -1,0 +1,27 @@
+{
+  "language": "es",
+  "duration": 13.318,
+  "text": "¡Joder, de puta madre, tío! ¡Qué controlado lo tienes todo! Yo llevo viendo la moneda esa que tenía los mil pabetes ahí invertidos y lleva desde el viernes bajando.",
+  "segments": [
+    {
+      "start": 0.4,
+      "end": 3.4,
+      "text": "¡Joder, de puta madre, tío!"
+    },
+    {
+      "start": 3.4,
+      "end": 6.4,
+      "text": "¡Qué controlado lo tienes todo!"
+    },
+    {
+      "start": 6.4,
+      "end": 10.4,
+      "text": "Yo llevo viendo la moneda esa que tenía los mil pabetes ahí invertidos"
+    },
+    {
+      "start": 10.4,
+      "end": 13.4,
+      "text": "y lleva desde el viernes bajando."
+    }
+  ]
+}

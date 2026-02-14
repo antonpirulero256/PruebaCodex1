@@ -1,0 +1,62 @@
+{
+  "language": "es",
+  "duration": 62.758,
+  "text": "una pregunta que te quería hacer yo, por ejemplo, inviertes en una moneda, por ejemplo, que está a un euro, vale, inviertes 100 euros. Si sube, por ejemplo, un 100% en una semana, claro, ganas 200 euros. Si, por ejemplo, vendes en ese momento, no sé si me equivoco, eh, tú corrijeme que yo estoy muy verde en esto. La semana ha subido 200% o un 100%. Esa moneda, si yo no vendo y luego baja un 200%, claro, yo estoy en negativo, ese dinero lo tengo negativo, pero si, al cabo de, por ejemplo, 3 meses, vuelve a subir un 300%, vuelvo a tener dinero y una vez baja de lo que yo he invertido ya está perdida esa moneda, ese dinero invertido.",
+  "segments": [
+    {
+      "start": 1.01,
+      "end": 6.01,
+      "text": "una pregunta que te quería hacer yo, por ejemplo,"
+    },
+    {
+      "start": 6.01,
+      "end": 12.01,
+      "text": "inviertes en una moneda, por ejemplo, que está a un euro, vale, inviertes 100 euros."
+    },
+    {
+      "start": 12.01,
+      "end": 19.01,
+      "text": "Si sube, por ejemplo, un 100% en una semana,"
+    },
+    {
+      "start": 19.01,
+      "end": 25.01,
+      "text": "claro, ganas 200 euros. Si, por ejemplo, vendes en ese momento,"
+    },
+    {
+      "start": 25.01,
+      "end": 29.01,
+      "text": "no sé si me equivoco, eh, tú corrijeme que yo estoy muy verde en esto."
+    },
+    {
+      "start": 29.01,
+      "end": 34.01,
+      "text": "La semana ha subido 200% o un 100%."
+    },
+    {
+      "start": 34.01,
+      "end": 40.01,
+      "text": "Esa moneda, si yo no vendo y luego baja un 200%,"
+    },
+    {
+      "start": 40.01,
+      "end": 45.01,
+      "text": "claro, yo estoy en negativo, ese dinero lo tengo negativo,"
+    },
+    {
+      "start": 45.01,
+      "end": 51.01,
+      "text": "pero si, al cabo de, por ejemplo, 3 meses, vuelve a subir un 300%,"
+    },
+    {
+      "start": 51.01,
+      "end": 57.01,
+      "text": "vuelvo a tener dinero y una vez baja de lo que yo he invertido"
+    },
+    {
+      "start": 57.01,
+      "end": 62.01,
+      "text": "ya está perdida esa moneda, ese dinero invertido."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "language": "es",
+  "duration": 14.218,
+  "text": "Pedro, ¿cómo estás? Buenas tardes. Una pregunta, lo que vamos a cambiar en los 30.000, me lo van a cambiar en USTD, ¿verdad? Es que estoy mirando de conseguir un chico aquí que me va a cobrar menos.",
+  "segments": [
+    {
+      "start": 0.21,
+      "end": 10.21,
+      "text": "Pedro, ¿cómo estás? Buenas tardes. Una pregunta, lo que vamos a cambiar en los 30.000, me lo van a cambiar en USTD, ¿verdad?"
+    },
+    {
+      "start": 10.21,
+      "end": 14.21,
+      "text": "Es que estoy mirando de conseguir un chico aquí que me va a cobrar menos."
+    }
+  ]
+}

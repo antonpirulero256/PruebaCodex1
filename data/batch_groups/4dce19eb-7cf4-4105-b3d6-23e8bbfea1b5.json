@@ -1,0 +1,13 @@
+{
+  "group_id": "4dce19eb-7cf4-4105-b3d6-23e8bbfea1b5",
+  "name": "upload-local-chunked",
+  "batch_ids": [
+    "c8b2e8b0-dfbd-4405-868f-aee0f4bd1174",
+    "e9b0d115-7709-4249-b9a6-9eab43de3cf0",
+    "8b6e9465-11fb-4f73-8aa0-64d73ca3c46a",
+    "8cc57711-de98-4836-99fd-330bdefab503",
+    "430dd001-d9e8-4120-9d0d-ca99dd952508",
+    "3e3475a6-2053-466e-bdbe-0d06ded08be5"
+  ],
+  "created_at": "2026-02-14T16:04:02.738378+00:00"
+}

@@ -1,0 +1,17 @@
+{
+  "language": "es",
+  "duration": 4.118,
+  "text": "hostia que putada lo del señor este eh voy a preguntar a ver",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.0,
+      "text": "hostia que putada lo del señor este"
+    },
+    {
+      "start": 2.0,
+      "end": 4.0,
+      "text": "eh voy a preguntar a ver"
+    }
+  ]
+}

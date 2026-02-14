@@ -1,0 +1,17 @@
+{
+  "language": "es",
+  "duration": 8.258,
+  "text": "Como ha ido el padre. O sea, que tienes otro nando por ahí, ¿no? Hago la puta.",
+  "segments": [
+    {
+      "start": 0.34,
+      "end": 6.22,
+      "text": "Como ha ido el padre. O sea, que tienes otro nando por ahí, ¿no?"
+    },
+    {
+      "start": 6.22,
+      "end": 7.22,
+      "text": "Hago la puta."
+    }
+  ]
+}

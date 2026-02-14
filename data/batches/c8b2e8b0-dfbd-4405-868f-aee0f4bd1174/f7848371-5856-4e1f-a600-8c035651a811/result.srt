@@ -1,0 +1,43 @@
+1
+00:00:01,010 --> 00:00:06,010
+una pregunta que te quería hacer yo, por ejemplo,
+
+2
+00:00:06,010 --> 00:00:12,010
+inviertes en una moneda, por ejemplo, que está a un euro, vale, inviertes 100 euros.
+
+3
+00:00:12,010 --> 00:00:19,010
+Si sube, por ejemplo, un 100% en una semana,
+
+4
+00:00:19,010 --> 00:00:25,010
+claro, ganas 200 euros. Si, por ejemplo, vendes en ese momento,
+
+5
+00:00:25,010 --> 00:00:29,010
+no sé si me equivoco, eh, tú corrijeme que yo estoy muy verde en esto.
+
+6
+00:00:29,010 --> 00:00:34,010
+La semana ha subido 200% o un 100%.
+
+7
+00:00:34,010 --> 00:00:40,010
+Esa moneda, si yo no vendo y luego baja un 200%,
+
+8
+00:00:40,010 --> 00:00:45,010
+claro, yo estoy en negativo, ese dinero lo tengo negativo,
+
+9
+00:00:45,010 --> 00:00:51,010
+pero si, al cabo de, por ejemplo, 3 meses, vuelve a subir un 300%,
+
+10
+00:00:51,010 --> 00:00:57,010
+vuelvo a tener dinero y una vez baja de lo que yo he invertido
+
+11
+00:00:57,010 --> 00:01:02,010
+ya está perdida esa moneda, ese dinero invertido.

@@ -1,0 +1,733 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Transcripción - UI simple</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 24px; max-width: 980px; }
+    h1, h2 { margin-bottom: 8px; }
+    .card { border: 1px solid #ddd; border-radius: 8px; padding: 16px; margin-bottom: 16px; }
+    .row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin: 8px 0; }
+    label { min-width: 140px; }
+    input, select, button, textarea { padding: 8px; }
+    input[type="text"], input[type="number"], select { min-width: 240px; }
+    button { cursor: pointer; }
+    .muted { color: #666; font-size: 13px; }
+    .ok { color: #0a7a2f; font-weight: 600; }
+    .off { color: #9b1c1c; font-weight: 600; }
+    .status-processing { color: #0b4da2; font-weight: 600; }
+    .status-ok { color: #0a7a2f; font-weight: 600; }
+    .status-error { color: #9b1c1c; font-weight: 600; }
+    pre { background: #f7f7f7; padding: 12px; border-radius: 6px; overflow: auto; }
+  </style>
+</head>
+<body>
+  <h1>UI simple de Transcripción</h1>
+  <p class="muted">Página integrada en la API. Usa los endpoints del backend sin herramientas externas.</p>
+
+  <div class="card">
+    <h2>Estado y configuración</h2>
+    <div class="row">
+      <button id="btnHealth">Ver health</button>
+      <button id="btnSettings">Ver settings</button>
+    </div>
+    <pre id="systemOutput"></pre>
+  </div>
+
+  <div class="card">
+    <h2>Batch desde carpeta local (equipo)</h2>
+    <p class="muted">Selecciona una carpeta local y se enviarán todos los audios compatibles como batch.</p>
+    <div class="row">
+      <input id="localFolderInput" type="file" multiple webkitdirectory directory />
+      <button id="btnSendLocalFolder">Enviar carpeta local</button>
+    </div>
+    <div class="row">
+      <input id="singleFileInput" type="file" accept=".mp3,.wav,.m4a,.flac,.ogg,.opus,.aac,.webm,.mp4,.wma,.aiff,.aif" />
+      <button id="btnSendSingleFile">Encolar archivo individual</button>
+    </div>
+    <div class="row">
+      <input id="singleQueueInput" type="file" multiple accept=".mp3,.wav,.m4a,.flac,.ogg,.opus,.aac,.webm,.mp4,.wma,.aiff,.aif" />
+      <button id="btnAddToSingleQueue">Añadir a cola</button>
+      <button id="btnSendNextFromQueue">Encolar siguiente</button>
+      <button id="btnSendAllFromQueue">Encolar todos</button>
+      <select id="singleQueueRemoveSelect" style="min-width: 260px;"></select>
+      <button id="btnRemoveFromSingleQueue">Quitar seleccionado</button>
+      <button id="btnClearSingleQueue">Limpiar cola</button>
+    </div>
+    <div class="row">
+      <span class="muted" id="singleQueueSummary">Cola local: 0 pendientes</span>
+    </div>
+    <div class="row">
+      <span class="muted" id="singleQueueNow">Procesando ahora: (ninguno)</span>
+    </div>
+    <pre id="singleQueueOutput"></pre>
+    <div class="row">
+      <label for="localLanguage">Idioma</label>
+      <input id="localLanguage" type="text" placeholder="vacío = autodetección" />
+    </div>
+    <div class="row">
+      <label for="localBeam">Beam size</label>
+      <input id="localBeam" type="number" min="1" max="10" value="5" />
+    </div>
+    <div class="row">
+      <label for="localVAD">VAD filter</label>
+      <select id="localVAD"><option value="true" selected>true</option><option value="false">false</option></select>
+    </div>
+    <div class="row">
+      <label for="localFormats">Formatos</label>
+      <input id="localFormats" type="text" value="txt,srt,json" placeholder="txt,srt,vtt,json" />
+    </div>
+    <div class="row">
+      <label for="localChunkSize">Archivos por envío</label>
+      <input id="localChunkSize" type="number" min="1" value="25" />
+      <span class="muted">Para carpetas grandes, usa envíos pequeños (ej. 20-30).</span>
+    </div>
+    <pre id="localBatchOutput"></pre>
+  </div>
+
+  <div class="card">
+    <h2>Batch desde carpeta del servidor</h2>
+    <div class="row">
+      <label for="serverFolderPath">Ruta carpeta</label>
+      <input id="serverFolderPath" type="text" placeholder="/app/data/inbox" />
+    </div>
+    <div class="row">
+      <label for="serverRecursive">Recursivo</label>
+      <select id="serverRecursive"><option value="true">true</option><option value="false" selected>false</option></select>
+    </div>
+    <div class="row">
+      <label for="serverMaxFiles">Max files (opcional)</label>
+      <input id="serverMaxFiles" type="number" min="1" placeholder="ej. 200" />
+    </div>
+    <div class="row">
+      <button id="btnPreviewServerFolder">Preview</button>
+      <button id="btnEnqueueServerFolder">Encolar carpeta servidor</button>
+    </div>
+    <pre id="serverFolderOutput"></pre>
+  </div>
+
+  <div class="card">
+    <h2>Consultar estado y descargar</h2>
+    <div class="row">
+      <label for="statusGroupId">Group ID</label>
+      <input id="statusGroupId" type="text" placeholder="pega group_id" />
+      <button id="btnGroupStatus">Ver grupo</button>
+      <button id="btnGroupZip">Descargar ZIP grupo</button>
+      <button id="btnGroupTxt">Descargar TXT grupo</button>
+    </div>
+    <div class="row">
+      <label for="statusBatchId">Batch ID</label>
+      <input id="statusBatchId" type="text" placeholder="pega batch_id" />
+      <button id="btnBatchStatus">Ver batch</button>
+      <button id="btnStartPolling">Auto-refresh ON</button>
+      <button id="btnStopPolling">Auto-refresh OFF</button>
+      <button id="btnBatchZip">Descargar ZIP (all)</button>
+      <button id="btnBatchTxt">Descargar TXT combinado</button>
+    </div>
+    <div class="row">
+      <span>Estado polling:</span>
+      <span id="pollingState" class="off">Inactivo</span>
+      <span class="muted" id="lastUpdateAt"></span>
+    </div>
+    <div class="row">
+      <span class="muted" id="batchCounters">Resumen: queued 0 | processing 0 | done 0 | failed 0</span>
+    </div>
+    <div class="row">
+      <label for="statusJobId">Job ID</label>
+      <input id="statusJobId" type="text" placeholder="pega job_id" />
+      <select id="jobFormat"><option>txt</option><option>srt</option><option>vtt</option><option>json</option></select>
+      <button id="btnJobStatus">Ver job</button>
+      <button id="btnJobDownload">Descargar job</button>
+    </div>
+    <pre id="statusOutput"></pre>
+  </div>
+
+  <script>
+    const AUDIO_EXTENSIONS = new Set([".mp3", ".wav", ".m4a", ".flac", ".ogg", ".opus", ".aac", ".webm", ".mp4", ".wma", ".aiff", ".aif"]);
+
+    const byId = (id) => document.getElementById(id);
+    const showJson = (id, data) => { byId(id).textContent = JSON.stringify(data, null, 2); };
+    const showText = (id, text) => { byId(id).textContent = text; };
+    let pollingTimer = null;
+    let singleFileQueue = [];
+    let singleNextBatchIds = [];
+
+    function describeFile(file) {
+      const sizeKb = Math.max(1, Math.round((file.size || 0) / 1024));
+      return `${file.name} (${sizeKb} KB)`;
+    }
+
+    function setSingleQueueNow(status, message) {
+      const el = byId("singleQueueNow");
+      el.className = "muted";
+      if (status === "processing") el.classList.add("status-processing");
+      if (status === "ok") el.classList.add("status-ok");
+      if (status === "error") el.classList.add("status-error");
+      el.textContent = `Procesando ahora: ${message}`;
+    }
+
+    function renderSingleQueue(preferredIndex = null) {
+      byId("singleQueueSummary").textContent = `Cola local: ${singleFileQueue.length} pendientes`;
+
+      const removeSelect = byId("singleQueueRemoveSelect");
+      const previousValue = removeSelect.value;
+      const targetValue = preferredIndex === null ? previousValue : String(preferredIndex);
+      removeSelect.innerHTML = "";
+      if (!singleFileQueue.length) {
+        const emptyOption = document.createElement("option");
+        emptyOption.value = "";
+        emptyOption.textContent = "(cola vacía)";
+        removeSelect.appendChild(emptyOption);
+        removeSelect.disabled = true;
+      } else {
+        singleFileQueue.forEach((file, index) => {
+          const option = document.createElement("option");
+          option.value = String(index);
+          option.textContent = file.name;
+          removeSelect.appendChild(option);
+        });
+        removeSelect.disabled = false;
+        if (targetValue !== "" && Number.isInteger(Number(targetValue)) && Number(targetValue) >= 0 && Number(targetValue) < singleFileQueue.length) {
+          removeSelect.value = targetValue;
+        } else {
+          removeSelect.value = "0";
+        }
+      }
+
+      const preview = singleFileQueue.slice(0, 20).map((file, index) => `${index + 1}. ${describeFile(file)}`);
+      const hasMore = singleFileQueue.length > 20;
+      const lines = [
+        ...preview,
+        hasMore ? `... y ${singleFileQueue.length - 20} más` : "",
+      ].filter(Boolean);
+      showText("singleQueueOutput", lines.length ? lines.join("\n") : "(cola vacía)");
+    }
+
+    function isAudioFile(file) {
+      const dot = file.name.lastIndexOf(".");
+      const ext = dot >= 0 ? file.name.slice(dot).toLowerCase() : "";
+      return AUDIO_EXTENSIONS.has(ext);
+    }
+
+    async function updateSingleNextGroup(batchId) {
+      if (!batchId) return null;
+      if (!singleNextBatchIds.includes(batchId)) {
+        singleNextBatchIds.push(batchId);
+      }
+
+      if (singleNextBatchIds.length === 1) {
+        byId("statusGroupId").value = "";
+        byId("statusBatchId").value = batchId;
+        startBatchPolling();
+        return null;
+      }
+
+      try {
+        const groupPayload = await callJson("/batch-groups", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ batch_ids: singleNextBatchIds, name: "single-next-sequence" }),
+        });
+        if (groupPayload.group_id) {
+          byId("statusGroupId").value = groupPayload.group_id;
+          byId("statusBatchId").value = singleNextBatchIds[singleNextBatchIds.length - 1] || "";
+          startBatchPolling();
+        }
+        return groupPayload;
+      } catch (error) {
+        byId("statusGroupId").value = "";
+        byId("statusBatchId").value = batchId;
+        startBatchPolling();
+        return { error: String(error) };
+      }
+    }
+
+    async function enqueueOneFile(file, options = { updateStatus: true }) {
+      const formats = byId("localFormats").value.split(",").map(v => v.trim()).filter(Boolean);
+      const language = byId("localLanguage").value.trim();
+      const beam = byId("localBeam").value || "5";
+      const vad = byId("localVAD").value;
+
+      const formData = new FormData();
+      formData.append("files", file, file.name);
+      if (language) formData.append("language", language);
+      formData.append("beam_size", beam);
+      formData.append("vad_filter", vad);
+      for (const format of formats) formData.append("export_formats", format);
+
+      const payload = await callJson("/transcribe/batch", { method: "POST", body: formData });
+      if (payload.batch_id && options.updateStatus) {
+        byId("statusBatchId").value = payload.batch_id;
+        byId("statusGroupId").value = "";
+        startBatchPolling();
+      }
+      return payload;
+    }
+
+    function setPollingIndicator(isActive) {
+      const el = byId("pollingState");
+      el.textContent = isActive ? "Activo" : "Inactivo";
+      el.className = isActive ? "ok" : "off";
+    }
+
+    function setLastUpdateNow() {
+      byId("lastUpdateAt").textContent = `Última actualización: ${new Date().toLocaleTimeString()}`;
+    }
+
+    function updateBatchCounters(jobs) {
+      const counters = { queued: 0, processing: 0, done: 0, failed: 0 };
+      for (const job of jobs || []) {
+        const status = (job?.status || "").toLowerCase();
+        if (status in counters) {
+          counters[status] += 1;
+        }
+      }
+      byId("batchCounters").textContent =
+        `Resumen: queued ${counters.queued} | processing ${counters.processing} | done ${counters.done} | failed ${counters.failed}`;
+    }
+
+    async function callJson(url, options = {}) {
+      const response = await fetch(url, options);
+      const payload = await response.json().catch(() => ({}));
+      if (!response.ok) {
+        throw new Error(payload.detail || `Error ${response.status}`);
+      }
+      return payload;
+    }
+
+    byId("btnHealth").onclick = async () => {
+      try {
+        showJson("systemOutput", await callJson("/health"));
+      } catch (error) {
+        showText("systemOutput", String(error));
+      }
+    };
+
+    byId("btnSettings").onclick = async () => {
+      try {
+        showJson("systemOutput", await callJson("/settings"));
+      } catch (error) {
+        showText("systemOutput", String(error));
+      }
+    };
+
+    byId("btnSendLocalFolder").onclick = async () => {
+      const files = Array.from(byId("localFolderInput").files || []);
+      if (!files.length) {
+        showText("localBatchOutput", "Selecciona una carpeta con archivos.");
+        return;
+      }
+
+      const formats = byId("localFormats").value.split(",").map(v => v.trim()).filter(Boolean);
+      const language = byId("localLanguage").value.trim();
+      const beam = byId("localBeam").value || "5";
+      const vad = byId("localVAD").value;
+      const chunkSize = Math.max(1, Number(byId("localChunkSize").value || 25));
+
+      const audioFiles = [];
+      for (const file of files) {
+        const dot = file.name.lastIndexOf(".");
+        const ext = dot >= 0 ? file.name.slice(dot).toLowerCase() : "";
+        if (!AUDIO_EXTENSIONS.has(ext)) continue;
+        audioFiles.push(file);
+      }
+
+      if (!audioFiles.length) {
+        showText("localBatchOutput", "No se detectaron audios compatibles en la carpeta seleccionada.");
+        return;
+      }
+
+      const chunks = [];
+      for (let i = 0; i < audioFiles.length; i += chunkSize) {
+        chunks.push(audioFiles.slice(i, i + chunkSize));
+      }
+
+      const results = [];
+      for (let index = 0; index < chunks.length; index += 1) {
+        const chunk = chunks[index];
+        const formData = new FormData();
+        for (const file of chunk) {
+          const name = file.webkitRelativePath || file.name;
+          formData.append("files", file, name);
+        }
+        if (language) formData.append("language", language);
+        formData.append("beam_size", beam);
+        formData.append("vad_filter", vad);
+        for (const format of formats) formData.append("export_formats", format);
+
+        try {
+          const payload = await callJson("/transcribe/batch", { method: "POST", body: formData });
+          results.push({ chunk: index + 1, files: chunk.length, ok: true, batch_id: payload.batch_id, payload });
+          showText("localBatchOutput", `Enviado chunk ${index + 1}/${chunks.length} (${chunk.length} archivos)...`);
+        } catch (error) {
+          results.push({ chunk: index + 1, files: chunk.length, ok: false, error: String(error) });
+          break;
+        }
+      }
+
+      const successful = results.filter(r => r.ok);
+      const failed = results.filter(r => !r.ok);
+      const batchIds = successful.map(r => r.batch_id);
+      let groupPayload = null;
+      if (batchIds.length) {
+        try {
+          groupPayload = await callJson("/batch-groups", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ batch_ids: batchIds, name: "upload-local-chunked" }),
+          });
+        } catch (error) {
+          groupPayload = { error: String(error) };
+        }
+      }
+
+      showJson("localBatchOutput", {
+        detected_audio_files: audioFiles.length,
+        chunk_size: chunkSize,
+        total_chunks: chunks.length,
+        successful_chunks: successful.length,
+        failed_chunks: failed.length,
+        batch_ids: batchIds,
+        group: groupPayload,
+        results,
+      });
+
+      if (batchIds.length) {
+        byId("statusBatchId").value = batchIds[batchIds.length - 1];
+        if (groupPayload && groupPayload.group_id) {
+          byId("statusGroupId").value = groupPayload.group_id;
+        }
+        startBatchPolling();
+      }
+    };
+
+    byId("btnSendSingleFile").onclick = async () => {
+      const file = (byId("singleFileInput").files || [])[0];
+      if (!file) {
+        showText("localBatchOutput", "Selecciona un archivo de audio.");
+        return;
+      }
+
+      if (!isAudioFile(file)) {
+        showText("localBatchOutput", "Formato no soportado. Selecciona un audio compatible.");
+        return;
+      }
+
+      try {
+        const payload = await enqueueOneFile(file);
+        singleNextBatchIds = [];
+        showJson("localBatchOutput", payload);
+      } catch (error) {
+        showText("localBatchOutput", String(error));
+      }
+    };
+
+    byId("btnAddToSingleQueue").onclick = () => {
+      const selected = Array.from(byId("singleQueueInput").files || []);
+      if (!selected.length) {
+        showText("singleQueueOutput", "Selecciona archivos para añadir a la cola.");
+        return;
+      }
+
+      const valid = selected.filter(isAudioFile);
+      const ignored = selected.length - valid.length;
+      singleFileQueue.push(...valid);
+      renderSingleQueue();
+
+      if (ignored > 0) {
+        showText("singleQueueOutput", `${valid.length} añadidos, ${ignored} ignorados por formato no soportado.`);
+        renderSingleQueue();
+      }
+    };
+
+    byId("btnSendNextFromQueue").onclick = async () => {
+      if (!singleFileQueue.length) {
+        showText("singleQueueOutput", "No hay archivos pendientes en la cola.");
+        setSingleQueueNow("ok", "(ninguno)");
+        return;
+      }
+
+      renderSingleQueue(0);
+      const nextFile = singleFileQueue[0];
+      setSingleQueueNow("processing", nextFile.name);
+      showText("singleQueueOutput", `Encolando siguiente: ${describeFile(nextFile)} ...`);
+      try {
+        const payload = await enqueueOneFile(nextFile);
+        singleFileQueue.shift();
+        renderSingleQueue(0);
+        const groupPayload = await updateSingleNextGroup(payload.batch_id);
+        setSingleQueueNow("ok", "(ninguno)");
+        showJson("localBatchOutput", {
+          mode: "single-next",
+          file: nextFile.name,
+          batch_id: payload.batch_id,
+          batch_ids_sequence: singleNextBatchIds,
+          group: groupPayload,
+          jobs: payload.jobs,
+          queue_pending: singleFileQueue.length,
+        });
+      } catch (error) {
+        setSingleQueueNow("error", "(error)");
+        showText("singleQueueOutput", `Error en ${nextFile.name}: ${String(error)}`);
+      }
+    };
+
+    byId("btnSendAllFromQueue").onclick = async () => {
+      if (!singleFileQueue.length) {
+        showText("singleQueueOutput", "No hay archivos pendientes en la cola.");
+        setSingleQueueNow("ok", "(ninguno)");
+        return;
+      }
+
+      const total = singleFileQueue.length;
+      const results = [];
+      const successfulBatchIds = [];
+      singleNextBatchIds = [];
+      for (let index = 0; index < total; index += 1) {
+        renderSingleQueue(0);
+        const file = singleFileQueue[0];
+        setSingleQueueNow("processing", file.name);
+        showText("singleQueueOutput", `Encolando ${index + 1}/${total}: ${describeFile(file)} ...`);
+        try {
+          const payload = await enqueueOneFile(file, { updateStatus: false });
+          results.push({ ok: true, file: file.name, batch_id: payload.batch_id });
+          if (payload.batch_id) {
+            successfulBatchIds.push(payload.batch_id);
+          }
+          singleFileQueue.shift();
+          renderSingleQueue(0);
+        } catch (error) {
+          results.push({ ok: false, file: file.name, error: String(error) });
+          setSingleQueueNow("error", "(error)");
+          break;
+        }
+      }
+
+      if (!results.some(item => !item.ok)) {
+        setSingleQueueNow("ok", "(ninguno)");
+      }
+
+      let groupPayload = null;
+      if (successfulBatchIds.length > 1) {
+        try {
+          groupPayload = await callJson("/batch-groups", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ batch_ids: successfulBatchIds, name: "single-queue-bulk" }),
+          });
+        } catch (error) {
+          groupPayload = { error: String(error) };
+        }
+      }
+
+      if (groupPayload && groupPayload.group_id) {
+        byId("statusGroupId").value = groupPayload.group_id;
+        byId("statusBatchId").value = successfulBatchIds[successfulBatchIds.length - 1] || "";
+        startBatchPolling();
+      } else if (successfulBatchIds.length === 1) {
+        byId("statusGroupId").value = "";
+        byId("statusBatchId").value = successfulBatchIds[0];
+        startBatchPolling();
+      }
+
+      showJson("localBatchOutput", {
+        mode: "single-all",
+        total_requested: total,
+        sent_ok: results.filter(item => item.ok).length,
+        failed: results.filter(item => !item.ok).length,
+        batch_ids: successfulBatchIds,
+        group: groupPayload,
+        queue_pending: singleFileQueue.length,
+        results,
+      });
+    };
+
+    byId("btnRemoveFromSingleQueue").onclick = () => {
+      if (!singleFileQueue.length) {
+        showText("singleQueueOutput", "No hay archivos pendientes en la cola.");
+        return;
+      }
+
+      const selectedValue = byId("singleQueueRemoveSelect").value;
+      const selectedIndex = Number(selectedValue);
+      if (!Number.isInteger(selectedIndex) || selectedIndex < 0 || selectedIndex >= singleFileQueue.length) {
+        showText("singleQueueOutput", "Selecciona un archivo válido para quitar.");
+        return;
+      }
+
+      const removed = singleFileQueue.splice(selectedIndex, 1)[0];
+      const nextIndex = Math.min(selectedIndex, singleFileQueue.length - 1);
+      renderSingleQueue(nextIndex);
+      showText("singleQueueOutput", `Eliminado: ${describeFile(removed)}\n\n${byId("singleQueueOutput").textContent}`);
+    };
+
+    byId("btnClearSingleQueue").onclick = () => {
+      singleFileQueue = [];
+      singleNextBatchIds = [];
+      renderSingleQueue();
+      setSingleQueueNow("ok", "(ninguno)");
+    };
+
+    byId("btnPreviewServerFolder").onclick = async () => {
+      const formData = new FormData();
+      formData.append("folder_path", byId("serverFolderPath").value.trim());
+      formData.append("recursive", byId("serverRecursive").value);
+      const max = byId("serverMaxFiles").value.trim();
+      if (max) formData.append("max_files", max);
+      try {
+        showJson("serverFolderOutput", await callJson("/transcribe/batch/folder/preview", { method: "POST", body: formData }));
+      } catch (error) {
+        showText("serverFolderOutput", String(error));
+      }
+    };
+
+    byId("btnEnqueueServerFolder").onclick = async () => {
+      const formData = new FormData();
+      formData.append("folder_path", byId("serverFolderPath").value.trim());
+      formData.append("recursive", byId("serverRecursive").value);
+      const max = byId("serverMaxFiles").value.trim();
+      if (max) formData.append("max_files", max);
+      formData.append("export_formats", "txt");
+      formData.append("export_formats", "srt");
+      formData.append("export_formats", "json");
+      try {
+        const payload = await callJson("/transcribe/batch/folder", { method: "POST", body: formData });
+        showJson("serverFolderOutput", payload);
+        if (payload.batch_id) {
+          byId("statusBatchId").value = payload.batch_id;
+          startBatchPolling();
+        }
+      } catch (error) {
+        showText("serverFolderOutput", String(error));
+      }
+    };
+
+    async function fetchAndRenderBatchStatus() {
+      const batchId = byId("statusBatchId").value.trim();
+      if (!batchId) {
+        showText("statusOutput", "Escribe un batch_id.");
+        stopBatchPolling();
+        return;
+      }
+      try {
+        const payload = await callJson(`/batches/${encodeURIComponent(batchId)}`);
+        showJson("statusOutput", payload);
+        setLastUpdateNow();
+        const jobs = Array.isArray(payload.jobs) ? payload.jobs : [];
+        updateBatchCounters(jobs);
+        if (jobs.length > 0) {
+          const allDone = jobs.every(job => job.status === "done" || job.status === "failed");
+          if (allDone) {
+            stopBatchPolling();
+          }
+        }
+      } catch (error) {
+        showText("statusOutput", String(error));
+        updateBatchCounters([]);
+      }
+    }
+
+    async function fetchAndRenderGroupStatus() {
+      const groupId = byId("statusGroupId").value.trim();
+      if (!groupId) {
+        showText("statusOutput", "Escribe un group_id.");
+        stopBatchPolling();
+        return;
+      }
+      try {
+        const payload = await callJson(`/batch-groups/${encodeURIComponent(groupId)}`);
+        showJson("statusOutput", payload);
+        setLastUpdateNow();
+        const summary = payload.summary || {};
+        byId("batchCounters").textContent =
+          `Resumen: queued ${summary.queued || 0} | processing ${summary.processing || 0} | done ${summary.done || 0} | failed ${summary.failed || 0}`;
+        if (payload.completed) {
+          stopBatchPolling();
+        }
+      } catch (error) {
+        showText("statusOutput", String(error));
+        updateBatchCounters([]);
+      }
+    }
+
+    function startBatchPolling() {
+      stopBatchPolling();
+      const groupId = byId("statusGroupId").value.trim();
+      if (groupId) {
+        fetchAndRenderGroupStatus();
+        pollingTimer = setInterval(fetchAndRenderGroupStatus, 3000);
+      } else {
+        fetchAndRenderBatchStatus();
+        pollingTimer = setInterval(fetchAndRenderBatchStatus, 3000);
+      }
+      setPollingIndicator(true);
+    }
+
+    function stopBatchPolling() {
+      if (pollingTimer) {
+        clearInterval(pollingTimer);
+        pollingTimer = null;
+      }
+      setPollingIndicator(false);
+    }
+
+    byId("btnBatchStatus").onclick = async () => {
+      fetchAndRenderBatchStatus();
+    };
+
+    byId("btnGroupStatus").onclick = async () => {
+      fetchAndRenderGroupStatus();
+    };
+
+    byId("btnStartPolling").onclick = () => startBatchPolling();
+    byId("btnStopPolling").onclick = () => stopBatchPolling();
+
+    byId("btnJobStatus").onclick = async () => {
+      const jobId = byId("statusJobId").value.trim();
+      if (!jobId) return showText("statusOutput", "Escribe un job_id.");
+      try {
+        showJson("statusOutput", await callJson(`/jobs/${encodeURIComponent(jobId)}`));
+      } catch (error) {
+        showText("statusOutput", String(error));
+      }
+    };
+
+    byId("btnBatchZip").onclick = () => {
+      const batchId = byId("statusBatchId").value.trim();
+      if (!batchId) return showText("statusOutput", "Escribe un batch_id.");
+      window.open(`/batches/${encodeURIComponent(batchId)}/download?format=all`, "_blank");
+    };
+
+    byId("btnGroupZip").onclick = () => {
+      const groupId = byId("statusGroupId").value.trim();
+      if (!groupId) return showText("statusOutput", "Escribe un group_id.");
+      window.open(`/batch-groups/${encodeURIComponent(groupId)}/download?format=all`, "_blank");
+    };
+
+    byId("btnBatchTxt").onclick = () => {
+      const batchId = byId("statusBatchId").value.trim();
+      if (!batchId) return showText("statusOutput", "Escribe un batch_id.");
+      window.open(`/batches/${encodeURIComponent(batchId)}/download/txt`, "_blank");
+    };
+
+    byId("btnGroupTxt").onclick = () => {
+      const groupId = byId("statusGroupId").value.trim();
+      if (!groupId) return showText("statusOutput", "Escribe un group_id.");
+      window.open(`/batch-groups/${encodeURIComponent(groupId)}/download/txt`, "_blank");
+    };
+
+    byId("btnJobDownload").onclick = () => {
+      const jobId = byId("statusJobId").value.trim();
+      const format = byId("jobFormat").value;
+      if (!jobId) return showText("statusOutput", "Escribe un job_id.");
+      window.open(`/jobs/${encodeURIComponent(jobId)}/download?format=${encodeURIComponent(format)}`, "_blank");
+    };
+
+    setPollingIndicator(false);
+    updateBatchCounters([]);
+    renderSingleQueue();
+    setSingleQueueNow("ok", "(ninguno)");
+  </script>
+</body>
+</html>

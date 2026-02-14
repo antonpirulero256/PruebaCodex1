@@ -1,0 +1,27 @@
+{
+  "language": "es",
+  "duration": 14.694,
+  "text": "No es que se olviden, es que ellos viven de eso, pues se piensa que te están ganando casi 2.000 dólares y no hay que hacer nada. Entonces siempre hay que tener mucho cuidado con eso. Para próximas, preguntad a mi sin problemas.",
+  "segments": [
+    {
+      "start": 0.94,
+      "end": 6.94,
+      "text": "No es que se olviden, es que ellos viven de eso, pues se piensa que te están ganando casi 2.000 dólares"
+    },
+    {
+      "start": 6.94,
+      "end": 9.94,
+      "text": "y no hay que hacer nada."
+    },
+    {
+      "start": 9.94,
+      "end": 11.94,
+      "text": "Entonces siempre hay que tener mucho cuidado con eso."
+    },
+    {
+      "start": 11.94,
+      "end": 14.94,
+      "text": "Para próximas, preguntad a mi sin problemas."
+    }
+  ]
+}

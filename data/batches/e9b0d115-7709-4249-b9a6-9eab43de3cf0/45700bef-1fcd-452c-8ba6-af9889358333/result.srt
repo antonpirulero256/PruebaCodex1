@@ -1,0 +1,3 @@
+1
+00:00:01,490 --> 00:00:03,890
+Un contacto para qué? Para cambiar el dinero, ¿no?

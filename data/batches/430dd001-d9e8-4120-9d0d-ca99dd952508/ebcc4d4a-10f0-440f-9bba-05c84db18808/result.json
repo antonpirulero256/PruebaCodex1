@@ -1,0 +1,17 @@
+{
+  "language": "es",
+  "duration": 13.078,
+  "text": "esta sale un poquito más barata la otra sale por 310 320 y esta sale por no me acuerdo ahora serán 220 210 o algo así pero va muy bien también",
+  "segments": [
+    {
+      "start": 0.5,
+      "end": 7.82,
+      "text": "esta sale un poquito más barata la otra sale por 310 320 y esta sale por no me acuerdo ahora"
+    },
+    {
+      "start": 7.82,
+      "end": 12.5,
+      "text": "serán 220 210 o algo así pero va muy bien también"
+    }
+  ]
+}

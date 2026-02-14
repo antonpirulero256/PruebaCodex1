@@ -1,0 +1,32 @@
+{
+  "language": "es",
+  "duration": 24.858,
+  "text": "Bueno, yo no entiendo mucho de Pa del Tío, yo soy de Escuaz, pero por lo poco que llevo jugando y las palas que he probado, esta es de las que me gusta, porque tiene bastante control y aparte absorbe mucho el golpe, o sea, no te hace... no se come el brazo el golpe, ¿sabes? Es una pala buena para la gente que tiene tendinitis y todo el rollo. A mí ya te digo, me encanta cómo va.",
+  "segments": [
+    {
+      "start": 0.08,
+      "end": 6.3,
+      "text": "Bueno, yo no entiendo mucho de Pa del Tío, yo soy de Escuaz, pero por lo poco que llevo"
+    },
+    {
+      "start": 6.3,
+      "end": 10.24,
+      "text": "jugando y las palas que he probado, esta es de las que me gusta, porque tiene bastante"
+    },
+    {
+      "start": 10.24,
+      "end": 17.02,
+      "text": "control y aparte absorbe mucho el golpe, o sea, no te hace... no se come el brazo"
+    },
+    {
+      "start": 17.02,
+      "end": 21.44,
+      "text": "el golpe, ¿sabes? Es una pala buena para la gente que tiene tendinitis y todo el"
+    },
+    {
+      "start": 21.44,
+      "end": 24.08,
+      "text": "rollo. A mí ya te digo, me encanta cómo va."
+    }
+  ]
+}

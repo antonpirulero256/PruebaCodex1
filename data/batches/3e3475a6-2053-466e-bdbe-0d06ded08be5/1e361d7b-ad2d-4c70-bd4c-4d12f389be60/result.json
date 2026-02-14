@@ -1,0 +1,22 @@
+{
+  "language": "es",
+  "duration": 13.313,
+  "text": "Y otra bocina, en martes no sabes por dónde te van a mandar la pasta. O sea, si es el mismo chico, tuyo que será por terra cebente. Si no, pues dímelo cuanto antes, si puedes, por favor.",
+  "segments": [
+    {
+      "start": 0.53,
+      "end": 4.73,
+      "text": "Y otra bocina, en martes no sabes por dónde te van a mandar la pasta."
+    },
+    {
+      "start": 4.73,
+      "end": 8.53,
+      "text": "O sea, si es el mismo chico, tuyo que será por terra cebente."
+    },
+    {
+      "start": 8.53,
+      "end": 13.53,
+      "text": "Si no, pues dímelo cuanto antes, si puedes, por favor."
+    }
+  ]
+}

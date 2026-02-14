@@ -1,0 +1,3 @@
+1
+00:00:00,530 --> 00:00:05,050
+Se puede hacer de forma anónima todo esto, ¿no?

@@ -1,0 +1,3 @@
+1
+00:00:00,000 --> 00:00:05,000
+Mirad, te enseño una moneda que ha invertido él y la saca una pasta.

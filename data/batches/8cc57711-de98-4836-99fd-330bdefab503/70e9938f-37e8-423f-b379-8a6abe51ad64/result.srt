@@ -1,0 +1,3 @@
+1
+00:00:00,000 --> 00:00:04,600
+No me entero de nada Pedro esa imagen no se leer nada ahí

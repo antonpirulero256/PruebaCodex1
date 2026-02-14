@@ -1,0 +1,17 @@
+{
+  "language": "es",
+  "duration": 14.498,
+  "text": "Pedro me dice que se ha quedado sin TRX y que no puede hacer transferencias, me pregunta si le puedes mandar 20 euros y te hace luego y te los pasa en USDT",
+  "segments": [
+    {
+      "start": 0.78,
+      "end": 5.74,
+      "text": "Pedro me dice que se ha quedado sin TRX y que no puede hacer transferencias, me"
+    },
+    {
+      "start": 5.74,
+      "end": 15.06,
+      "text": "pregunta si le puedes mandar 20 euros y te hace luego y te los pasa en USDT"
+    }
+  ]
+}

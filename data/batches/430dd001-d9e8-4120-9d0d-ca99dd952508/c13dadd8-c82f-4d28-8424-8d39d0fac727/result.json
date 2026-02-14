@@ -1,0 +1,32 @@
+{
+  "language": "es",
+  "duration": 15.354,
+  "text": "¿Qué pasa con esto? Tienes que medir el riesgo porque, por ejemplo, si WIF cae de 3 a 2,7... claro, pierdes el 100% de lo que has metido porque estás apalancándote por 10 así me explico",
+  "segments": [
+    {
+      "start": 1.07,
+      "end": 5.07,
+      "text": "¿Qué pasa con esto? Tienes que medir el riesgo porque, por ejemplo, si WIF"
+    },
+    {
+      "start": 5.07,
+      "end": 8.07,
+      "text": "cae de 3 a 2,7..."
+    },
+    {
+      "start": 8.07,
+      "end": 11.07,
+      "text": "claro, pierdes el 100% de lo que has metido"
+    },
+    {
+      "start": 11.07,
+      "end": 13.07,
+      "text": "porque estás apalancándote por 10"
+    },
+    {
+      "start": 13.07,
+      "end": 15.07,
+      "text": "así me explico"
+    }
+  ]
+}

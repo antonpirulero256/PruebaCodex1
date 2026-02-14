@@ -1,0 +1,22 @@
+{
+  "language": "es",
+  "duration": 18.438,
+  "text": "Aquí tengo un colega antarragona que lo hace, dice que cobran entre el cuatro y el cinco y luego tiene otro contacto gruno allí que también me pasó de su teléfono que cobra el cuatro Entonces nada, miro de cambiarlo y nos ponemos en ello",
+  "segments": [
+    {
+      "start": 0.62,
+      "end": 6.62,
+      "text": "Aquí tengo un colega antarragona que lo hace, dice que cobran entre el cuatro y el cinco"
+    },
+    {
+      "start": 6.62,
+      "end": 11.62,
+      "text": "y luego tiene otro contacto gruno allí que también me pasó de su teléfono que cobra el cuatro"
+    },
+    {
+      "start": 11.62,
+      "end": 17.62,
+      "text": "Entonces nada, miro de cambiarlo y nos ponemos en ello"
+    }
+  ]
+}

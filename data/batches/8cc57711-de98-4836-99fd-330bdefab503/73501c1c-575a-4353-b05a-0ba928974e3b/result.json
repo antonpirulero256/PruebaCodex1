@@ -1,0 +1,32 @@
+{
+  "language": "es",
+  "duration": 12.818,
+  "text": "¡Ostia, perdona que no me había enterado el mensaje que estaba hablando con el chico! ¿Ya se ha ido? ¿Ya se ha ido? ¿El qué? ¿Qué es lo que falta?",
+  "segments": [
+    {
+      "start": 0.34,
+      "end": 4.34,
+      "text": "¡Ostia, perdona que no me había enterado el mensaje que estaba hablando con el chico!"
+    },
+    {
+      "start": 4.34,
+      "end": 6.34,
+      "text": "¿Ya se ha ido?"
+    },
+    {
+      "start": 6.34,
+      "end": 8.34,
+      "text": "¿Ya se ha ido?"
+    },
+    {
+      "start": 8.34,
+      "end": 10.34,
+      "text": "¿El qué?"
+    },
+    {
+      "start": 10.34,
+      "end": 12.34,
+      "text": "¿Qué es lo que falta?"
+    }
+  ]
+}

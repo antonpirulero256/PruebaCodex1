@@ -1,0 +1,9 @@
+{
+  "batch_id": "4cba50c6-c330-4c30-b69a-42491eaa3569",
+  "created_at": "2026-02-14T15:28:24.116639+00:00",
+  "jobs": [
+    "e3fab1e1-58fb-48e7-93b4-ec222b6feb9a",
+    "467624a0-ff7f-424c-a1b7-9613e7dc2ca2"
+  ],
+  "total_jobs": 2
+}

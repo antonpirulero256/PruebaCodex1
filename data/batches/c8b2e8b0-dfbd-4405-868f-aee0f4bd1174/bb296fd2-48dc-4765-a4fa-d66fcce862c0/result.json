@@ -1,0 +1,22 @@
+{
+  "language": "es",
+  "duration": 9.738,
+  "text": "no me iba a pasar lo mismo con el wasa tío no iba oye pues de puta madre si no te han puesto la placa si te va a quedar bien la soldadura",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 4.8,
+      "text": "no me iba a pasar lo mismo con el wasa tío no iba oye pues de puta madre si no"
+    },
+    {
+      "start": 4.8,
+      "end": 7.28,
+      "text": "te han puesto la placa"
+    },
+    {
+      "start": 7.28,
+      "end": 10.76,
+      "text": "si te va a quedar bien la soldadura"
+    }
+  ]
+}

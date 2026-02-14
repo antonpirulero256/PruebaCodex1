@@ -1,0 +1,27 @@
+{
+  "language": "es",
+  "duration": 24.878,
+  "text": "Sí, es el mismo chico, pero no es seguro que mañana esté ahí con él. Si puedo mañana me escapo y voy a verlo y hago la transacción, pero no estoy seguro. Te voy a comentar algo a lo de la billetera para mí que me la quiero abrir. ¿Cómo lo hago con el metamask? Que es el que me mandaste tú.",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 6.36,
+      "text": "Sí, es el mismo chico, pero no es seguro que mañana esté ahí con él. Si puedo mañana me"
+    },
+    {
+      "start": 6.36,
+      "end": 13.92,
+      "text": "escapo y voy a verlo y hago la transacción, pero no estoy seguro."
+    },
+    {
+      "start": 13.92,
+      "end": 21.88,
+      "text": "Te voy a comentar algo a lo de la billetera para mí que me la quiero abrir. ¿Cómo lo"
+    },
+    {
+      "start": 21.88,
+      "end": 24.36,
+      "text": "hago con el metamask? Que es el que me mandaste tú."
+    }
+  ]
+}

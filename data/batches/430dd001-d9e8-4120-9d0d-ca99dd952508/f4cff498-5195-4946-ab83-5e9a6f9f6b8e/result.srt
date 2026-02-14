@@ -1,0 +1,3 @@
+1
+00:00:00,270 --> 00:00:02,270
+Dejo el teléfono que están los mosos delante.

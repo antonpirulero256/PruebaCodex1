@@ -9,6 +9,7 @@ services:
       - WHISPER_COMPUTE_TYPE=int8
       - REDIS_URL=redis://redis:6379/0
       - RQ_QUEUE=transcriptions
+      - MAX_BATCH_FILES_DEFAULT=500
     volumes:
       - ./data:/app/data
     depends_on:
@@ -23,12 +24,14 @@ services:
       - WHISPER_COMPUTE_TYPE=int8
       - REDIS_URL=redis://redis:6379/0
       - RQ_QUEUE=transcriptions
+      - MAX_BATCH_FILES_DEFAULT=500
     volumes:
       - ./data:/app/data
     depends_on:
       - redis
 
   redis:
-    image: redis:7-alpine
+    image: docker.io/library/redis:7.2-alpine
+    pull_policy: always
     ports:
       - "6379:6379"

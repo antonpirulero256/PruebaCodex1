@@ -1,0 +1,27 @@
+{
+  "language": "es",
+  "duration": 22.578,
+  "text": "no te preocupes Pedro ya te digo que son cosas que pasan que no suelen pasar muy a menudo gracias a dios pero son cosas que pasan ya está nada cuando puedas ya me explicas un poco cómo llevas el asunto no has tenido mucho tiempo de ponerte con ellos pero bueno ya cuando eso me cuentas venga tío una",
+  "segments": [
+    {
+      "start": 0.75,
+      "end": 6.11,
+      "text": "no te preocupes Pedro ya te digo que son cosas que pasan que no suelen pasar muy a"
+    },
+    {
+      "start": 6.11,
+      "end": 13.23,
+      "text": "menudo gracias a dios pero son cosas que pasan ya está nada cuando puedas ya"
+    },
+    {
+      "start": 13.23,
+      "end": 17.47,
+      "text": "me explicas un poco cómo llevas el asunto no has tenido mucho tiempo de"
+    },
+    {
+      "start": 17.47,
+      "end": 22.35,
+      "text": "ponerte con ellos pero bueno ya cuando eso me cuentas venga tío una"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "language": "es",
+  "duration": 27.598,
+  "text": "Pedro, gracias tío por la información. No, no, es en euros, es en euros. Revolute tengo, tenía 2 o 3 mil euros. O 4 mil, y de esos 4 mil metí mil 100 en una cripto de la aplicación de Revolute. Ya está. Que de hecho, hoy por hoy creo que lo miré ayer y ni beneficio ni pérdida. O sea, subí un poquito, volví a bajar y ahí está.",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 5.0,
+      "text": "Pedro, gracias tío por la información. No, no, es en euros, es en euros."
+    },
+    {
+      "start": 5.0,
+      "end": 8.0,
+      "text": "Revolute tengo, tenía 2 o 3 mil euros."
+    },
+    {
+      "start": 8.0,
+      "end": 16.0,
+      "text": "O 4 mil, y de esos 4 mil metí mil 100 en una cripto de la aplicación de Revolute."
+    },
+    {
+      "start": 16.0,
+      "end": 24.0,
+      "text": "Ya está. Que de hecho, hoy por hoy creo que lo miré ayer y ni beneficio ni pérdida."
+    },
+    {
+      "start": 24.0,
+      "end": 28.0,
+      "text": "O sea, subí un poquito, volví a bajar y ahí está."
+    }
+  ]
+}

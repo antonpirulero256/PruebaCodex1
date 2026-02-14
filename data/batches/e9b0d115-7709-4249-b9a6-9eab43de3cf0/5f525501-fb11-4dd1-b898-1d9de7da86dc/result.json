@@ -1,0 +1,17 @@
+{
+  "language": "es",
+  "duration": 10.738,
+  "text": "O sea, ¿atracaron a la novia de quién? ¿De un moro o de tu hermano? Es que me estoy liando. Tu hermano no estaba en casa con la clavícula rota, que se había caído con la moto.",
+  "segments": [
+    {
+      "start": 0.18,
+      "end": 4.42,
+      "text": "O sea, ¿atracaron a la novia de quién? ¿De un moro o de tu hermano?"
+    },
+    {
+      "start": 5.78,
+      "end": 10.54,
+      "text": "Es que me estoy liando. Tu hermano no estaba en casa con la clavícula rota, que se había caído con la moto."
+    }
+  ]
+}

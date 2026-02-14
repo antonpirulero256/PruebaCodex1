@@ -1,0 +1,17 @@
+{
+  "language": "es",
+  "duration": 6.738,
+  "text": "Hostia, me alegro, tío, de que solo haya sido eso. Eres muy joven, tío, para tener problemas de corazón.",
+  "segments": [
+    {
+      "start": 0.18,
+      "end": 3.34,
+      "text": "Hostia, me alegro, tío, de que solo haya sido eso."
+    },
+    {
+      "start": 3.34,
+      "end": 6.34,
+      "text": "Eres muy joven, tío, para tener problemas de corazón."
+    }
+  ]
+}

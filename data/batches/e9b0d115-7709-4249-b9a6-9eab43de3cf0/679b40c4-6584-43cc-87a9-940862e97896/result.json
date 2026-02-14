@@ -1,0 +1,22 @@
+{
+  "language": "es",
+  "duration": 9.158,
+  "text": "perdona que no te he contestado que me ha dicho antes es que voy de culo ahora ya estoy sentado cenando y estoy más tranquilo me ha dicho que cuando llega a casa que me lo manda",
+  "segments": [
+    {
+      "start": 0.05,
+      "end": 3.89,
+      "text": "perdona que no te he contestado que me ha dicho antes es que voy de culo"
+    },
+    {
+      "start": 3.89,
+      "end": 7.89,
+      "text": "ahora ya estoy sentado cenando y estoy más tranquilo me ha dicho que cuando"
+    },
+    {
+      "start": 7.89,
+      "end": 10.81,
+      "text": "llega a casa que me lo manda"
+    }
+  ]
+}

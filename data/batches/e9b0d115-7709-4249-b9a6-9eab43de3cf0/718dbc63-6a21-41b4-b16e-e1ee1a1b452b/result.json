@@ -1,0 +1,22 @@
+{
+  "language": "es",
+  "duration": 13.398,
+  "text": "Sí, la tengo aquí en la aplicación esa. Tengo otra que cuando te mandé el dinero con el chico este de Barcelona, me hizo abrirme una. Ahora te digo cómo se llama.",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 3.0,
+      "text": "Sí, la tengo aquí en la aplicación esa."
+    },
+    {
+      "start": 3.0,
+      "end": 12.0,
+      "text": "Tengo otra que cuando te mandé el dinero con el chico este de Barcelona, me hizo abrirme una."
+    },
+    {
+      "start": 12.0,
+      "end": 14.0,
+      "text": "Ahora te digo cómo se llama."
+    }
+  ]
+}

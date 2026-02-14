@@ -1,0 +1,17 @@
+{
+  "language": "es",
+  "duration": 10.258,
+  "text": "bueno tengo aún cosas en el otro piso tío pero a ver si me animo y lo termino ya que tengo que entregar las llaves",
+  "segments": [
+    {
+      "start": 0.4,
+      "end": 7.84,
+      "text": "bueno tengo aún cosas en el otro piso tío pero a ver si me animo y lo termino"
+    },
+    {
+      "start": 7.84,
+      "end": 11.08,
+      "text": "ya que tengo que entregar las llaves"
+    }
+  ]
+}

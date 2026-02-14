@@ -1,0 +1,27 @@
+{
+  "language": "es",
+  "duration": 22.918,
+  "text": "vale pero por ejemplo en el caso de que baje al límite que puede bajar claro yo ese dinero ya no puedo ni recuperarlo ni ni disponer de él pero si al cabo de un tiempo vuelve a subir vuelvo a tener posibilidad de ganar o ese dinero ya lo he perdido para siempre",
+  "segments": [
+    {
+      "start": 0.46,
+      "end": 6.9,
+      "text": "vale pero por ejemplo en el caso de que baje al límite que puede bajar"
+    },
+    {
+      "start": 6.9,
+      "end": 14.18,
+      "text": "claro yo ese dinero ya no puedo ni recuperarlo ni ni disponer de él"
+    },
+    {
+      "start": 14.18,
+      "end": 19.9,
+      "text": "pero si al cabo de un tiempo vuelve a subir vuelvo a tener posibilidad de"
+    },
+    {
+      "start": 19.9,
+      "end": 24.26,
+      "text": "ganar o ese dinero ya lo he perdido para siempre"
+    }
+  ]
+}

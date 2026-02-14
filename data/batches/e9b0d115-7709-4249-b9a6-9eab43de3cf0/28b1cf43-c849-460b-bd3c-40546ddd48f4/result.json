@@ -1,0 +1,27 @@
+{
+  "language": "es",
+  "duration": 17.998,
+  "text": "¿Qué hago con esto, tío? ¿Lo retiro? ¿Me espero? ¿Qué hago? ¿Por qué has subido? ¿Has subido? ¿Le puse 1.100? Y bueno, has subido esta noche porque se mantenía ahí, subía un poquito, bajaba, subía un poquito, bajaba. Y esta noche ha pegado un pelotazo... bueno, un pelotazo, ya ves tú, ha subido un poquito más.",
+  "segments": [
+    {
+      "start": 0.27,
+      "end": 4.27,
+      "text": "¿Qué hago con esto, tío? ¿Lo retiro? ¿Me espero? ¿Qué hago? ¿Por qué has subido?"
+    },
+    {
+      "start": 5.27,
+      "end": 7.27,
+      "text": "¿Has subido? ¿Le puse 1.100?"
+    },
+    {
+      "start": 8.27,
+      "end": 12.27,
+      "text": "Y bueno, has subido esta noche porque se mantenía ahí, subía un poquito, bajaba, subía un poquito, bajaba."
+    },
+    {
+      "start": 13.27,
+      "end": 17.27,
+      "text": "Y esta noche ha pegado un pelotazo... bueno, un pelotazo, ya ves tú, ha subido un poquito más."
+    }
+  ]
+}

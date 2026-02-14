@@ -1,0 +1,27 @@
+{
+  "language": "es",
+  "duration": 26.458,
+  "text": "No, porque quiere que hable Bruno, quiere que hable con el argentino, que es el que le gestiona allí y lo del piso. Y el argentino no tiene mi número, yo tengo el argentino, pero como no le he hablado todavía, pues por eso. Y Bruno no tiene este número con el que hablo contigo, que este de Wasp es el personal mío. Él tiene otro diferente, que no tiene nada que ver con este.",
+  "segments": [
+    {
+      "start": 0.14,
+      "end": 8.14,
+      "text": "No, porque quiere que hable Bruno, quiere que hable con el argentino, que es el que le gestiona allí y lo del piso."
+    },
+    {
+      "start": 8.14,
+      "end": 17.14,
+      "text": "Y el argentino no tiene mi número, yo tengo el argentino, pero como no le he hablado todavía, pues por eso."
+    },
+    {
+      "start": 17.14,
+      "end": 22.14,
+      "text": "Y Bruno no tiene este número con el que hablo contigo, que este de Wasp es el personal mío."
+    },
+    {
+      "start": 22.14,
+      "end": 26.14,
+      "text": "Él tiene otro diferente, que no tiene nada que ver con este."
+    }
+  ]
+}
